@@ -1,3 +1,25 @@
+html {
+  font-size: 16px
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
 header .logo {
   width: 300px;
+}
+
+section {
+
+}
+
+.service-areas ul {
+  overflow: hidden;
+}
+.service-areas li {
+  width: 25%;
+  float: left;
+  margin-right: 1rem
 }
