@@ -293,3 +293,24 @@ footer {
   margin: 0;
   padding-right: 0.6rem;
 }
+.badges {
+}
+.badge {
+  max-height: 80px;
+  max-width: 14%;
+}
+.badge + .badge {
+  padding-left: 5%;
+}
+.badge-elite {
+  max-width: none;
+  max-height: 90px;
+}
+@media print, screen and (max-width: 720px) {
+  .badge-elite {
+    max-width: 20%;
+  }
+  .badge + .badge {
+    padding-left: 3%;
+  }
+}
