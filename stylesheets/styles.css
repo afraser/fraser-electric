@@ -294,23 +294,54 @@ footer {
   padding-right: 0.6rem;
 }
 .badges {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
 }
 .badge {
+  cursor: pointer;
+}
+.badge img{
   max-height: 80px;
-  max-width: 14%;
+  max-width: 100%;
 }
-.badge + .badge {
-  padding-left: 5%;
+.badge h4 {
+  margin-bottom: .5rem;
 }
-.badge-elite {
-  max-width: none;
-  max-height: 90px;
+.badge .popover {
+  opacity: 0;
+  position: absolute;
+  width: 400px;
+  left: 50%;
+  margin-left: -200px;
+  border-radius: 4px;
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 10px 14px rgba(0,0,0,0.3);
+  padding: 1rem;
+  transition: 0.15s ease-in-out;
+  transition-property: margin-top, opacity;
+  margin-top: 0px;
+  top: -99999px;
 }
-@media print, screen and (max-width: 720px) {
+
+.badge:focus {
+  outline: none;
+  box-shadow: 0 4px 0 #ccc;
+}
+
+.popover:hover,
+.badge:focus .popover  {
+  opacity: 1;
+  margin-top: 11px;
+  top: auto;
+}
+
+/*@media print, screen and (max-width: 720px) {
   .badge-elite {
     max-width: 20%;
   }
   .badge + .badge {
     padding-left: 3%;
   }
-}
+}*/

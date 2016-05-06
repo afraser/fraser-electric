@@ -8,6 +8,7 @@ if (navigator.userAgent.match(/iPhone/i)) {
   }
   document.addEventListener("gesturestart", gestureStart, false);
 }
+
 function gestureStart() {
   for (i=0; i<metas.length; i++) {
     if (metas[i].name == "viewport") {
