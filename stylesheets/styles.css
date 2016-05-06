@@ -297,9 +297,11 @@ footer {
   position: relative;
   display: flex;
   justify-content: space-around;
+  margin-top: 2rem;
 }
 .badge {
   cursor: pointer;
+  padding: 0 .25rem;
 }
 .badge img{
   max-height: 80px;
@@ -323,6 +325,14 @@ footer {
   transition-property: margin-top, opacity;
   margin-top: 0px;
   top: -99999px;
+}
+@media print, screen and (max-width: 480px) {
+  .badge .popover {
+    width: auto;
+    margin: 0;
+    left: 0;
+    right: 0;
+  }
 }
 
 .badge:focus {
