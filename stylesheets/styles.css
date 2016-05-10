@@ -117,10 +117,9 @@ a:hover small {
 }
 
 blockquote {
-  border-left:1px solid #e5e5e5;
-  margin:0;
-  padding:0 0 0 20px;
-  font-style:italic;
+  margin: 0;
+  padding: 0 0 0 2rem;
+  font-style: italic;
 }
 
 code, pre {
@@ -161,7 +160,7 @@ img {
   max-width:100%;
 }
 
-header {
+.header {
   width:270px;
   float:left;
   position:fixed;
@@ -173,7 +172,7 @@ strong {
   font-weight:700;
 }
 
-section {
+body section {
   width:500px;
   float:right;
   padding-bottom:50px;
@@ -190,7 +189,7 @@ hr {
   margin:0 0 20px;
 }
 
-footer {
+.footer {
   width:270px;
   float:left;
   position:fixed;
@@ -205,20 +204,22 @@ footer {
     margin:0;
   }
 
-  header, section, footer {
+  .header,
+  body section,
+  .footer {
     float:none;
     position:static;
     width:auto;
   }
 
-  section {
+  body section {
     border:1px solid #e5e5e5;
     border-width:1px 0;
     padding:20px 0;
     margin:0 0 20px;
   }
 
-  header a small {
+  .header a small {
     display:inline;
   }
 
@@ -281,12 +282,31 @@ footer {
 }
 
 .testimonial {
-  margin-bottom: 1rem;
+  position: relative;
+  margin-bottom: 1.25rem;
+}
+.testimonial p {
+  margin-bottom: 0.5rem;
+}
+.testimonial p::before {
+  content: '“';
+  position: absolute;
+  top: 0;
+  left: 0.5rem;
+  font-size: 2.1rem;
+  line-height: 1;
+}
+.testimonial footer {
+  font-style: normal;
+}
+.testimonial footer::before {
+  content: '—'
 }
 
 .service-areas ul {
   display: flex;
   flex-wrap: wrap;
+  padding: 0;
 }
 .service-areas li {
   list-style: none;
