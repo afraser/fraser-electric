@@ -255,11 +255,17 @@ hr {
 
 
 .phone-number {
+  font-size: 1rem;
   color: #0078B2;
   font-style: italic;
   font-weight: bold;
   letter-spacing: 1px;
   margin-left: .5rem;
+}
+.phone-number:hover,
+.phone-number:focus,
+.phone-number:active {
+  text-decoration: underline;
 }
 .logo {
   margin-bottom: 1rem;
@@ -267,6 +273,9 @@ hr {
 @media print, screen and (min-width: 961px) {
   .logo {
     margin-left: -0.5rem;
+  }
+  footer .call-today {
+    display: none;
   }
 }
 @media print, screen and (max-width: 960px) {
